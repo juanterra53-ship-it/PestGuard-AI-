@@ -496,9 +496,22 @@ finally:
 
           <div className="space-y-3">
             <div>
-              <p className="text-[10px] text-white/40 font-mono mb-1.5">1. Instale as dependências na sua Raspberry Pi:</p>
-              <div className="bg-black p-2.5 rounded-xl border border-white/5 font-mono text-[9px] text-orange-400 select-all">
-                pip install opencv-python requests
+              <p className="text-[10px] text-white/40 font-mono mb-1.5">1. Instale as dependências na sua Raspberry Pi (Abordagem com Ambiente Virtual ou APT):</p>
+              <div className="space-y-2">
+                <div className="bg-black p-2.5 rounded-xl border border-white/5 font-mono text-[9px] text-orange-400 space-y-1">
+                  <p className="text-white/60 text-[8px] uppercase font-bold text-emerald-400">// Opção A (Recomendado - Ambiente Virtual):</p>
+                  <p>python3 -m venv venv</p>
+                  <p>source venv/bin/activate</p>
+                  <p>pip install opencv-python requests</p>
+                </div>
+                <div className="bg-black p-2.5 rounded-xl border border-white/5 font-mono text-[9px] text-orange-400 space-y-1">
+                  <p className="text-white/60 text-[8px] uppercase font-bold text-teal-400">// Opção B (Mais rápido - Ignorando a trava do Debian):</p>
+                  <p>pip install opencv-python requests --break-system-packages</p>
+                </div>
+                <div className="bg-black p-2.5 rounded-xl border border-white/5 font-mono text-[9px] text-orange-400 space-y-1">
+                  <p className="text-white/60 text-[8px] uppercase font-bold text-indigo-400">// Opção C (Pacotes de Sistema APT pré-compilados):</p>
+                  <p>sudo apt update && sudo apt install python3-opencv python3-requests -y</p>
+                </div>
               </div>
             </div>
 

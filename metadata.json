@@ -1,0 +1,11 @@
+{
+  "name": "PestGuard AI",
+  "description": "Real-time urban pest detection and monitoring system using computer vision and IoT.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
